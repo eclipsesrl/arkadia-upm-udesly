@@ -1,0 +1,43 @@
+<div class="footer wf-section">
+    <div class="container-footer">
+      <div class="container">
+        <div class="top-section">
+          <a href="{{ links.23 }}" class="logo cc-footer w-inline-block">{%- image images.52e50e2c.url, images.52e50e2c.alt, '[]', 'class="image-logo"' -%}</a>
+          <div class="footer-small-text">{{ texts.5a441106 }}</div>
+        </div>
+      </div>
+      <div class="separator-footer">
+        <div class="separator-color footer-line"></div>
+      </div>
+      <div class="container">
+        <div class="bottom">
+          <div class="bottom-1">
+            <div data-delay="0" data-hover="false" class="dropdown w-dropdown">
+              <div class="dropdown-toggle w-dropdown-toggle">
+                <div class="icon w-icon-dropdown-toggle"></div>
+                <div>{{ texts.6dd211e }}</div>
+              </div>
+              <nav class="dropdown-list w-dropdown-list">
+                {%- assign collection = collections.category -%}<div class="w-dyn-list">
+                  {%- unless collection.length == 0 -%}<div role="list" class="w-dyn-items">
+                    {%- for item in collection -%}<div role="listitem" class="dropdown-link w-dyn-item">
+                      <a href="{{ item.url }}" class="dropdown-link-text">{{ item.data.title }}</a>
+                    </div>{%- endfor -%}
+                  </div>{%- endunless -%}
+                  {%- if collection.length == 0 -%}<div class="w-dyn-empty">
+                    <div>{{ texts.3d503d2b }}</div>
+                  </div>{%- endif -%}
+                </div>
+              </nav>
+            </div>
+            <div class="footer-categories"></div>
+          </div>
+          <div class="bottom-2">
+            <div class="footer-links-container">
+              <div class="footer-links"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
